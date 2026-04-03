@@ -1,7 +1,6 @@
 "use client";
 
 import { Section } from "./ui/Section";
-import { motion } from "framer-motion";
 
 export default function About() {
   return (
@@ -13,13 +12,16 @@ export default function About() {
       
       <div className="w-full md:w-2/3 text-lg text-neutral-400 font-light leading-relaxed space-y-6">
         <p>
-          I am a software developer with a strong foundation in <span className="text-white font-medium">Data Structures and Algorithms</span>, Object-Oriented Programming, and Database Management Systems.
+          I&apos;m a 2nd-year <span className="text-white font-medium">B.Tech Computer Science and Engineering</span> student at SRM Institute of Science and Technology who is obsessed with learning how things work under the hood. For me, happiness is cracking a difficult problem, learning a new framework, and writing clean code. 
         </p>
         <p>
-          My focus is on understanding how things work under the hood. Whether it&apos;s building scalable backend infrastructure with <span className="text-white font-medium">Java and Python</span> or exploring the cutting edge of AI and System Design, I&apos;m driven by curiosity and a desire to build robust solutions.
+          My current academic standing is an <span className="text-white font-medium">8.87 CGPA</span>, but my real passion lies in practical application—especially when it comes to Artificial Intelligence, Java development, and building robust systems. I am a lifelong learner at heart, always ready to dive into the next big thing in tech.
         </p>
         <p>
-          Beyond writing code, I constantly strive to write <span className="text-white font-medium">clean, maintainable</span> software that stands the test of time, and I am always looking for the next challenging problem to solve.
+          My technical journey involves hands-on experience with Java, Python, and modern web development tools. I am deeply invested in mastering core computer science concepts such as <span className="text-white font-medium">Data Structures &amp; Algorithms, OOP, and Database Management</span>. 
+        </p>
+        <p>
+          I thrive in environments that challenge my problem-solving abilities and require adaptive learning. I am actively seeking a software development internship to bridge the gap between theoretical knowledge and real-world engineering impact.
         </p>
       </div>
     </Section>
