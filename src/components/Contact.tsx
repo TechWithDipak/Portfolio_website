@@ -35,7 +35,7 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
-          <a href="mailto:hello@example.com">
+          <a href="mailto:dipak.yadav04112@gmail.com">
             <MagneticButton className="bg-white text-black hover:bg-neutral-200 border-transparent flex items-center gap-2 group px-8 py-4 text-base md:text-lg">
               Say Hello
               <ArrowUpRight className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" size={20} />
@@ -52,7 +52,7 @@ export default function Contact() {
             <a href="https://www.linkedin.com/in/dipak-kumar-067b02354/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors flex items-center gap-2">
               <Linkedin size={16} /> LinkedIn
             </a>
-            <a href="mailto:hello@example.com" className="hover:text-white transition-colors flex items-center gap-2">
+            <a href="mailto:dipak.yadav04112@gmail.com" className="hover:text-white transition-colors flex items-center gap-2">
               <Mail size={16} /> Email
             </a>
           </div>
