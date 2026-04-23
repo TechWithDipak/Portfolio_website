@@ -2,14 +2,29 @@
 
 @theme {
   --font-sans: var(--font-inter);
-  --color-background: #050505;
-  --color-foreground: #ededed;
+  
+  /* Applying custom color palette from screenshot */
+  --color-background: #06141B;
+  --color-foreground: #CCD0CF;
+  
+  /* Map requested palette globally to slate values for instant theme change */
+  --color-slate-950: #06141B;
+  --color-slate-900: #11212D;
+  --color-slate-800: #253745;
+  --color-slate-700: #4A5C6A;
+  --color-slate-600: #4A5C6A;
+  --color-slate-500: #4A5C6A;
+  --color-slate-400: #9BA8AB;
+  --color-slate-300: #9BA8AB;
+  --color-slate-200: #CCD0CF;
+  --color-slate-100: #CCD0CF;
+  --color-white: #CCD0CF;
 }
 
 @layer base {
   :root {
-    --background: #050505;
-    --foreground: #ededed;
+    --background: #06141B;
+    --foreground: #CCD0CF;
   }
 
   body {
