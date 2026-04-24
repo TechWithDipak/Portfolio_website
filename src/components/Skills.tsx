@@ -45,7 +45,7 @@ export default function Skills() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-10%" }}
-            transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
             whileHover={{ y: -5 }}
             className="group relative p-6 rounded-2xl border border-white/10 bg-slate-900/40 backdrop-blur-xl overflow-hidden transition-all duration-300 hover:border-white/20 hover:bg-slate-800/50 hover:shadow-[0_0_40px_-10px_rgba(255,255,255,0.1)]"
           >
