@@ -1,59 +1,44 @@
-# Dipak Kumar | Developer Portfolio
+# Dipak Kumar
+
+**Agentic AI • Backend Systems • Full-Stack Web Development**
 
 ![Next.js](https://img.shields.io/badge/Next.js-15.0-black?logo=next.js)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?logo=tailwind-css)
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-black?logo=framer)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript)
 
-A modern, high-performance portfolio website built to showcase my projects, skills, and professional experience. Designed with a premium dark theme and smooth glassmorphic animations.
+Hi, I'm **Dipak Kumar**! I am a 3rd-year **B.Tech Computer Science** student at SRMIST (CGPA: 8.92/10) with a deep interest in building AI-powered backend systems, scalable software architectures, and intuitive web applications.
 
-## 👨‍💻 About Me
+This repository hosts the source code for my personal developer portfolio, which is designed with a premium dark theme, glassmorphic UI elements, and interactive Framer Motion animations.
 
-Hi, I'm **Dipak Kumar**! 
-I'm a 3rd-year **B.Tech Computer Science** student at SRMIST with a deep interest in building **Agentic AI workflows**, full-stack web applications, and scalable backend systems. I recently completed a Technology Internship at Omega Healthcare, where I developed a multi-agent LLM pipeline to automate healthcare claims using LangChain.
+## 👨‍💻 Experience
 
-I am passionate about Data Structures & Algorithms, System Design, and Generative AI, and I am actively seeking software engineering roles where I can solve real-world problems.
+**Technology Intern @ Omega Healthcare** 
+*May 2024 – June 2024*
+- Engineered a sequential LangChain multi-agent pipeline mapping across 6 nodes (Intake, Policy Checker, Medical Necessity, Auditor, Appeals, Approver).
+- Automated the processing of denied claims from unstructured data, utilizing Google Gemini to automatically draft print-ready PDF appeal letters.
+- Reduced manual drafting times significantly and gained hands-on experience in generative AI and prompt engineering.
 
-## 🚀 Features
+## 🚀 Featured Projects
 
-- **Premium Dark Mode UI**: A fully customized dark theme using an Electric Emerald/Cyan color palette.
-- **Glassmorphism**: Floating components and blurred backgrounds for a sleek, modern look.
-- **Framer Motion Animations**: Highly interactive UI with micro-interactions, floating mesh backgrounds, magnetic buttons, and staggered reveal animations.
-- **Responsive Layout**: Designed mobile-first using Tailwind CSS to look great on devices of all sizes.
+- **Claims Denial & Appeals Engine:** A multi-agent AI pipeline built with Python and LangChain for automating healthcare claims.
+- **DropSure (AI Parametric Insurance):** A parametric insurance backend built with Node.js during a hackathon, automatically triggering claim-free payouts using real-time weather and traffic API integrations.
+- **OCR Scanner:** A PySide6 desktop application utilizing EasyOCR with asynchronous background threading to prevent UI freezing during 15-20MB model loads.
+- **Browser Extensions:** Built "Instagram Reels Enhancer" for theater mode on desktop, and "Aura Start Page", a macOS-inspired vanilla JS start page.
 
-## 💻 Tech Stack
+## 🛠 Skills
 
-- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **Icons**: [Lucide React](https://lucide.dev/)
+- **Languages**: Java, Python, JavaScript, TypeScript, C/C++
+- **Frameworks**: React.js, Next.js, Node.js, Flask, Spring Boot, LangChain, PyTorch
+- **Core Concepts**: Data Structures & Algorithms, Object-Oriented Programming (OOP), DBMS, System Design
+- **Generative AI**: Agentic AI, Large Language Models (LLMs), Machine Learning
 
-## 🛠 Getting Started
+## 📫 Get In Touch
 
-To run this project locally on your machine:
+I am actively seeking software engineering and development internships where I can apply my strengths in algorithms and AI to solve real-world problems.
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/TechWithDipak/Portfolio_website.git
-   cd Portfolio_website
-   ```
-
-2. **Install the dependencies:**
-   ```bash
-   npm install
-   ```
-
-3. **Start the development server:**
-   ```bash
-   npm run dev
-   ```
-
-4. Open [http://localhost:3000](http://localhost:3000) in your browser to view the site.
-
-## 📄 Resume
-
-The "Download Resume" button links directly to `public/resume.pdf`. To update the resume, simply overwrite the existing `resume.pdf` file in the `public/` directory.
+- **GitHub**: [github.com/TechWithDipak](https://github.com/TechWithDipak)
+- **LinkedIn**: [linkedin.com/in/TechWithDipak](https://www.linkedin.com/in/TechWithDipak)
 
 ---
-*Designed and built with Next.js and Tailwind CSS.*
+*If you are a recruiter or fellow developer, feel free to reach out to me!*
