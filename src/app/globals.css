@@ -2,39 +2,45 @@
 
 @theme {
   --font-sans: var(--font-inter);
+  --font-heading: var(--font-outfit);
   
-  /* Applying custom color palette from screenshot */
-  --color-background: #06141B;
-  --color-foreground: #CCD0CF;
+  --color-background: #0A0A0A;
+  --color-foreground: #EDEDED;
   
-  /* Map requested palette globally to slate values for instant theme change */
-  --color-slate-950: #06141B;
-  --color-slate-900: #11212D;
-  --color-slate-800: #253745;
-  --color-slate-700: #4A5C6A;
-  --color-slate-600: #4A5C6A;
-  --color-slate-500: #4A5C6A;
-  --color-slate-400: #9BA8AB;
-  --color-slate-300: #9BA8AB;
-  --color-slate-200: #CCD0CF;
-  --color-slate-100: #CCD0CF;
-  --color-white: #CCD0CF;
+  --color-emerald-500: #10B981;
+  --color-cyan-500: #06B6D4;
+  
+  --color-slate-950: #0A0A0A;
+  --color-slate-900: #121212;
+  --color-slate-800: #1E1E1E;
+  --color-slate-700: #2D2D2D;
+  --color-slate-600: #3F3F46;
+  --color-slate-500: #71717A;
+  --color-slate-400: #A1A1AA;
+  --color-slate-300: #D4D4D8;
+  --color-slate-200: #E4E4E7;
+  --color-slate-100: #F4F4F5;
+  --color-white: #FFFFFF;
 }
 
 @layer base {
   :root {
-    --background: #06141B;
-    --foreground: #CCD0CF;
+    --background: #0A0A0A;
+    --foreground: #EDEDED;
   }
 
   body {
     background-color: var(--background);
     color: var(--foreground);
-    @apply antialiased overflow-x-hidden;
+    @apply antialiased overflow-x-hidden selection:bg-emerald-500/30 selection:text-emerald-200;
   }
 
   html {
     scroll-behavior: smooth;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
   }
 }
 
