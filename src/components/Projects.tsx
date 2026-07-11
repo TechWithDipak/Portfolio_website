@@ -103,7 +103,7 @@ function FeaturedProjectCard({ project, idx }: { project: typeof FEATURED_PROJEC
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-10%" }}
-      transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
       onMouseMove={handleMouseMove}
       className={clsx(
         "group relative flex flex-col justify-between rounded-3xl border border-white/5 bg-slate-900/40 backdrop-blur-2xl p-8 overflow-hidden hover:border-emerald-500/30 hover:shadow-[0_0_40px_-10px_rgba(16,185,129,0.1)] transition-all duration-500 hover:-translate-y-1",
