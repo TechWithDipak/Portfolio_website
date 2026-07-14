@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark scroll-smooth" suppressHydrationWarning>
-      <body className={`${inter.variable} ${outfit.variable} font-sans antialiased bg-slate-950 text-slate-200`} suppressHydrationWarning>
+      <body className={`${inter.variable} ${outfit.variable} font-sans antialiased`} suppressHydrationWarning>
         <div className="noise-overlay" />
         {children}
       </body>

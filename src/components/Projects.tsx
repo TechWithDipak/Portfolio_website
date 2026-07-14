@@ -3,15 +3,15 @@
 import { Section } from "./ui/Section";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import { LuExternalLink as ExternalLink, LuGithub as Github, LuFolder as Folder, LuPuzzle as Puzzle } from "react-icons/lu";
-import { useState, MouseEvent } from "react";
+import { MouseEvent } from "react";
 import clsx from "clsx";
 
 const FEATURED_PROJECTS = [
   {
     title: "Claims Denial & Appeals Engine",
     description: [
-      "Independently built a sequential LangChain multi-agent pipeline that analyzes {X} denied insurance claims from sample Excel data across {Y} pipeline stages and recommends targeted remediation actions.",
-      "Integrated Google Gemini to auto-generate print-ready PDF appeal letters, cutting manual drafting time from {X min} to under {Y min} per appeal."
+      "Independently built a sequential LangChain multi-agent pipeline that analyzes denied insurance claims from sample Excel data across multiple pipeline stages and recommends targeted remediation actions.",
+      "Integrated Google Gemini to auto-generate print-ready PDF appeal letters, cutting manual drafting time significantly."
     ],
     tech: ["Python", "LangChain", "Gemini"],
     year: "2026",
@@ -23,7 +23,7 @@ const FEATURED_PROJECTS = [
     title: "DropSure – AI Parametric Insurance",
     description: [
       "Built the Node.js backend engine and 3 third-party API integrations (weather, traffic, payments) for a 5-member hackathon team's parametric insurance PWA serving Q-commerce delivery riders.",
-      "Implemented rule-based payout logic auto-triggering claim-free payouts within 5 minutes when live thresholds are breached, with dynamic weekly premiums recalculated from 7-day risk forecasts."
+      "Implemented rule-based payout logic auto-triggering claim-free payouts within 5 minutes when live thresholds are breached."
     ],
     tech: ["Node.js", "Python", "REST APIs"],
     year: "2026",
@@ -73,7 +73,7 @@ const CHROME_EXTENSIONS = [
   {
     title: "Instagram Reels Enhancer",
     description: "A powerful Chrome Extension that overhauls Instagram Reels on desktop with an immersive Theater Mode, video rotation, custom aspect ratios, and native trackpad gestures.",
-    tech: ["JavaScript", "Chrome Extension"],
+    tech: ["JavaScript", "Chrome API"],
     github: "https://github.com/TechWithDipak/Instagram-Reels-Enhancer",
     live: null,
   },
@@ -103,10 +103,10 @@ function FeaturedProjectCard({ project, idx }: { project: typeof FEATURED_PROJEC
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-10%" }}
-      transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
+      transition={{ duration: 0.8, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
       onMouseMove={handleMouseMove}
       className={clsx(
-        "group relative flex flex-col justify-between rounded-3xl border border-white/5 bg-slate-900/40 backdrop-blur-2xl p-8 overflow-hidden hover:border-emerald-500/30 hover:shadow-[0_0_40px_-10px_rgba(16,185,129,0.1)] transition-all duration-500 hover:-translate-y-1",
+        "glass-panel glass-edge inner-glow group relative flex flex-col justify-between rounded-[32px] p-8 overflow-hidden hover:border-accent-indigo/30 hover:shadow-[0_0_40px_-10px_rgba(94,92,230,0.15)] transition-all duration-500 hover:-translate-y-1",
         project.colSpan
       )}
     >
@@ -117,17 +117,17 @@ function FeaturedProjectCard({ project, idx }: { project: typeof FEATURED_PROJEC
           backgroundImage: useMotionTemplate`
             radial-gradient(
               650px circle at ${mouseX}px ${mouseY}px,
-              rgba(16,185,129,0.1),
+              rgba(94,92,230,0.1),
               transparent 80%
             )
           `,
         }}
       />
       <div className="relative z-10">
-        <div className="flex items-start justify-between mb-6">
+        <div className="flex flex-col sm:flex-row sm:items-start justify-between mb-6 gap-4">
           <div>
-            <span className="text-emerald-400 text-sm font-medium tracking-wider uppercase mb-2 block">Featured Project • {project.year}</span>
-            <h3 className="text-2xl font-bold text-white group-hover:text-emerald-300 transition-colors">
+            <span className="text-accent-indigo text-xs font-semibold tracking-widest uppercase mb-2 block">Featured • {project.year}</span>
+            <h3 className="text-3xl font-bold text-white group-hover:text-accent-indigo transition-colors">
               {link && link !== "#" ? (
                 <a href={link} target="_blank" rel="noreferrer" className="hover:underline">
                   {project.title}
@@ -137,23 +137,23 @@ function FeaturedProjectCard({ project, idx }: { project: typeof FEATURED_PROJEC
               )}
             </h3>
           </div>
-          <div className="flex gap-4 text-slate-400">
+          <div className="flex gap-4 text-graphite-400">
             {project.github && project.github !== "#" && (
-              <a href={project.github} target="_blank" rel="noreferrer" className="hover:text-emerald-400 transition-colors p-2 hover:bg-emerald-500/10 rounded-full">
+              <a href={project.github} target="_blank" rel="noreferrer" className="hover:text-white transition-colors p-2 hover:bg-white/5 rounded-full backdrop-blur-md">
                 <Github size={22} suppressHydrationWarning />
               </a>
             )}
             {project.live && project.live !== "#" && (
-              <a href={project.live} target="_blank" rel="noreferrer" className="hover:text-emerald-400 transition-colors p-2 hover:bg-emerald-500/10 rounded-full">
+              <a href={project.live} target="_blank" rel="noreferrer" className="hover:text-white transition-colors p-2 hover:bg-white/5 rounded-full backdrop-blur-md">
                 <ExternalLink size={22} suppressHydrationWarning />
               </a>
             )}
           </div>
         </div>
-        <ul className="list-none text-slate-300 font-light mb-8 space-y-3 text-base leading-relaxed">
+        <ul className="list-none text-graphite-300 font-light mb-8 space-y-3 text-base leading-relaxed">
           {project.description.map((point, i) => (
             <li key={i} className="flex gap-3">
-              <span className="text-emerald-500 mt-1.5 shrink-0">▹</span>
+              <span className="text-accent-indigo mt-1.5 shrink-0 opacity-70">▹</span>
               <span>{point}</span>
             </li>
           ))}
@@ -162,7 +162,7 @@ function FeaturedProjectCard({ project, idx }: { project: typeof FEATURED_PROJEC
       
       <div className="relative z-10 flex flex-wrap gap-2 mt-auto">
         {project.tech.map(t => (
-          <span key={t} className="px-3 py-1 text-xs font-medium bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 rounded-full">
+          <span key={t} className="px-3 py-1.5 text-xs font-medium bg-white/[0.03] text-graphite-200 border border-white/[0.05] rounded-full shadow-sm">
             {t}
           </span>
         ))}
@@ -179,41 +179,43 @@ function MinorProjectCard({ project, idx, icon = "folder" }: { project: typeof O
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-10%" }}
-      transition={{ duration: 0.5, delay: idx * 0.1 }}
-      className="group relative flex flex-col justify-between rounded-2xl border border-white/5 bg-slate-900/30 p-6 hover:-translate-y-2 transition-all duration-300 hover:border-emerald-500/30 hover:bg-slate-800/40"
+      transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
+      className="glass-panel glass-edge group relative flex flex-col justify-between rounded-3xl p-6 hover:-translate-y-2 transition-all duration-500 hover:border-accent-indigo/20 hover:shadow-[0_0_30px_-5px_rgba(94,92,230,0.1)]"
     >
       <div className="flex justify-between items-center mb-6">
-        {icon === "puzzle" ? (
-          <Puzzle className="text-emerald-500" size={32} />
-        ) : (
-          <Folder className="text-emerald-500" size={32} />
-        )}
-        <div className="flex gap-3 text-slate-400">
+        <div className="p-3 rounded-2xl bg-white/[0.03] border border-white/[0.05] shadow-inner">
+          {icon === "puzzle" ? (
+            <Puzzle className="text-accent-indigo" size={24} />
+          ) : (
+            <Folder className="text-accent-indigo" size={24} />
+          )}
+        </div>
+        <div className="flex gap-3 text-graphite-400">
           {project.github && project.github !== "#" && (
-            <a href={project.github} target="_blank" rel="noreferrer" className="hover:text-emerald-400 transition-colors">
+            <a href={project.github} target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
               <Github size={20} suppressHydrationWarning />
             </a>
           )}
           {project.live && project.live !== "#" && (
-            <a href={project.live} target="_blank" rel="noreferrer" className="hover:text-emerald-400 transition-colors">
+            <a href={project.live} target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
               <ExternalLink size={20} suppressHydrationWarning />
             </a>
           )}
         </div>
       </div>
       
-      <h3 className="text-lg font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors">
+      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-accent-indigo transition-colors">
         {link && link !== "#" ? (
-          <a href={link} target="_blank" rel="noreferrer" className="hover:underline hover:underline-offset-4 decoration-emerald-500/50">
+          <a href={link} target="_blank" rel="noreferrer" className="hover:underline hover:underline-offset-4 decoration-accent-indigo/50">
             {project.title}
           </a>
         ) : (
           project.title
         )}
       </h3>
-      <p className="text-slate-400 text-sm font-light mb-6 leading-relaxed flex-grow">{project.description}</p>
+      <p className="text-graphite-400 text-sm font-light mb-6 leading-relaxed flex-grow">{project.description}</p>
       
-      <div className="flex flex-wrap gap-3 text-xs font-medium text-slate-500 font-mono">
+      <div className="flex flex-wrap gap-3 text-xs font-medium text-graphite-500 font-mono">
         {project.tech.join("  ")}
       </div>
     </motion.div>
@@ -224,8 +226,8 @@ export default function Projects() {
   return (
     <Section id="projects" className="py-24 md:py-32">
       <div className="mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white mb-2">Projects.</h2>
-        <div className="h-1 w-12 bg-emerald-500 rounded-full" />
+        <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">Projects</h2>
+        <div className="h-1 w-16 bg-accent-indigo rounded-full" />
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-24">
@@ -234,23 +236,23 @@ export default function Projects() {
         ))}
       </div>
 
-      <div className="mb-10 flex items-center gap-4">
-        <h3 className="text-2xl font-bold text-white">Other Noteworthy Projects</h3>
+      <div className="mb-10 flex items-center gap-6">
+        <h3 className="text-2xl font-bold text-white">Other Noteworthy Work</h3>
         <div className="h-px bg-white/10 flex-grow" />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-24">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-24">
         {OTHER_PROJECTS.map((project, idx) => (
           <MinorProjectCard key={project.title} project={project} idx={idx} />
         ))}
       </div>
       
-      <div className="mb-10 flex items-center gap-4">
-        <h3 className="text-2xl font-bold text-white">Chrome Extensions</h3>
+      <div className="mb-10 flex items-center gap-6">
+        <h3 className="text-2xl font-bold text-white">Browser Extensions</h3>
         <div className="h-px bg-white/10 flex-grow" />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {CHROME_EXTENSIONS.map((project, idx) => (
           <MinorProjectCard key={project.title} project={project} idx={idx} icon="puzzle" />
         ))}
