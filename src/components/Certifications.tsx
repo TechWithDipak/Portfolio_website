@@ -9,7 +9,7 @@ const EDUCATION = [
     period: "2024 - 2028",
     title: "Bachelor of Technology - Computer Science and Engineering",
     institution: "SRM Institute of Science and Technology (SRMIST)",
-    highlight: "Current CGPA: 8.92 / 10.0 (3rd Year)",
+    highlight: "Current CGPA: 8.87 / 10.0 (3rd Year)",
   },
   {
     period: "Completed 2024",
