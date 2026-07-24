@@ -34,7 +34,7 @@ export default function About() {
         <div className="absolute -inset-4 bg-gradient-to-r from-accent-indigo/10 to-transparent blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none" />
         <div className="glass-panel glass-edge inner-glow relative p-8 md:p-12 rounded-[32px] text-lg text-graphite-300 font-light leading-relaxed space-y-6">
           <motion.p variants={itemVariants}>
-            I&apos;m a 3rd-year <span className="text-white font-medium">B.Tech Computer Science</span> student at SRMIST (CGPA 8.92/10) with hands-on experience building AI-powered backend systems, agentic workflows, and full-stack web applications.
+            I&apos;m a 3rd-year <span className="text-white font-medium">B.Tech Computer Science</span> student at SRMIST (CGPA 8.87/10) with hands-on experience building AI-powered backend systems, agentic workflows, and full-stack web applications.
           </motion.p>
           <motion.p variants={itemVariants}>
             Recently, I completed a Technology Internship at Omega Healthcare, where I built a <span className="text-white font-medium">multi-agent LLM system</span> for healthcare claims automation using LangChain and Python, significantly reducing manual review efforts.
